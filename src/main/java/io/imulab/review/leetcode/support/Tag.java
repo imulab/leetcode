@@ -10,5 +10,6 @@ public enum Tag {
     MATH,
     STRING,
     TWO_POINTERS,
-    SLIDING_WINDOW
+    SLIDING_WINDOW,
+    DYNAMIC_PROGRAMMING
 }
