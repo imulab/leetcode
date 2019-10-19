@@ -28,7 +28,7 @@ public @interface Question {
     /**
      * @return an array containing relevant tags of the problem, describing its knowledge points.
      */
-    String[] tags();
+    Tag[] tags();
 
     /**
      * @return the difficulty level

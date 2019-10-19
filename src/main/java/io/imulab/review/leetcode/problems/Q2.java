@@ -2,12 +2,15 @@ package io.imulab.review.leetcode.problems;
 
 import io.imulab.review.leetcode.support.Difficulty;
 import io.imulab.review.leetcode.support.Question;
+import io.imulab.review.leetcode.support.Tag;
 
 @Question(
     index = "2",
     name = "Add Two Numbers",
-    links = {"https://leetcode-cn.com/problems/add-two-numbers/", ""},
-    tags = {"linked list", "math"},
+    links = {
+        "https://leetcode-cn.com/problems/add-two-numbers/",
+        "classpath:/resources/problems/Q2.png"},
+    tags = {Tag.LINKED_LIST, Tag.MATH},
     level = Difficulty.MEDIUM
 )
 public class Q2 {

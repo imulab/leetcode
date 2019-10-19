@@ -2,6 +2,7 @@ package io.imulab.review.leetcode.problems;
 
 import io.imulab.review.leetcode.support.Difficulty;
 import io.imulab.review.leetcode.support.Question;
+import io.imulab.review.leetcode.support.Tag;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,7 +12,7 @@ import java.util.Map;
     index = "1",
     name = "Two Sum",
     links = {"https://leetcode-cn.com/problems/two-sum/", "classpath:/resources/problems/Q1.png"},
-    tags = {"array", "hashtable"},
+    tags = {Tag.ARRAY, Tag.HASH_TABLE},
     level = Difficulty.EASY
 )
 public class Q1 {
