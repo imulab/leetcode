@@ -94,6 +94,41 @@ public class Q5 {
         }
     }
 
+    // It seems we gain very little by memorizing left and right array in DefaultSolution.
+    // In this solution, we will just try to expand from index i, and expand from index i and i+1
+    static class ExpandAroundCenter implements Solution {
+        @Override
+        public String longestPalindrome(String s) {
+            if (s == null || s.length() <= 1)
+                return s;
+
+            int start = 0, end = 0;
+            for (int i = 0; i < s.length(); i++) {
+                // attempt both 'xyx' and 'xyyx' mode
+                int len = Math.max(
+                    expandAroundCenter(s, i, i),
+                    expandAroundCenter(s, i, i+1)
+                );
+
+                if (len > end - start) {
+                    start = i - (len - 1) / 2;
+                    end = i + len / 2;
+                }
+            }
+
+            return s.substring(start, end + 1);
+        }
+
+        // try to expand from index l and index r, and return the distance it was able to expand to
+        private int expandAroundCenter(String s, int l, int r) {
+            while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
+                l--;
+                r++;
+            }
+            return r - l - 1;
+        }
+    }
+
     public static void main(String[] args) {
         Solution solution = new DefaultSolution();
         System.out.println(solution.longestPalindrome("babad"));
