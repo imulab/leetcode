@@ -4,8 +4,6 @@ import io.imulab.review.leetcode.support.Difficulty;
 import io.imulab.review.leetcode.support.Question;
 import io.imulab.review.leetcode.support.Tag;
 
-import java.util.Stack;
-
 @Question(
     index = "7",
     name = "Reverse integer",
